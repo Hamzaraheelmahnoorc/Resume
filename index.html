@@ -4,396 +4,468 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Nunito", sans-serif;
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: "Nunito", sans-serif;
+        }
 
-:root {
-    --bg-color: #191f36;
-    --snd-bg-color:#262840;
-    --text-color:#fff;
-    --main-color:#5982F4;
-}
+        :root {
+            --bg-color: #191f36;
+            --snd-bg-color:#262840;
+            --text-color:#fff;
+            --main-color:#5982F4;
+        }
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
 
-body {
-    background: var(--bg-color);
-    color: var(--text-color);
-}
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-}
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 9%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
 
-.logo {   
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 700;
-    cursor: default;
-}
+        .logo {   
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 700;
+            cursor: default;
+        }
 
-.navbar a {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin-left: 3rem;
-    font-weight: 700;
-}
+        .navbar a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-left: 3rem;
+            font-weight: 700;
+        }
 
-.navbar a:hover,
-.navbar a.active {
-    color: var(--text-color);
-}
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--text-color);
+        }
 
-#menu-icon {
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
-}
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            display: none;
+            cursor: pointer;
+        }
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .navbar {
+            display: flex;
+        }
 
-.home-content h3 {
-    font-size: 3.2rem;
-    font-weight: 700;
-}
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-.home-content h3:nth-of-type(2) {
-    margin-bottom: 2rem;
-}
+        .home-content h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
 
-span {
-    color: var(--main-color);
-}
+        .home-content h3:nth-of-type(2) {
+            margin-bottom: 2rem;
+        }
 
-.home-content h1 {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
+        span {
+            color: var(--main-color);
+        }
 
-.home-img img {
-    border-radius: 5%;
-    width: 25vw;
-    animation: floatImage 4s ease-in-out infinite;
-}
+        .home-content h1 {
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
 
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-2.4rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+        .home-img img {
+            border-radius: 5%;
+            width: 25vw;
+            animation: floatImage 4s ease-in-out infinite;
+        }
 
-.home-content p {
-    font-size: medium;
-}
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-2.4rem);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
 
-.social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
+        .home-content p {
+            font-size: medium;
+        }
 
-}
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background-color: transparent;
+            border: .2rem solid var(--main-color);
+            border-radius: 50%;
+            font-size: 2rem;
+            color: var(--main-color);
+            margin: 3rem 1.5rem 3rem 0;
+            transition: .5s ease;
 
-.social-media a:hover {
-    background: var(--main-color);
-    color: var(--snd-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
-}
+        }
 
-.btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
-}
+        .social-media a:hover {
+            background: var(--main-color);
+            color: var(--snd-bg-color);
+            box-shadow: 0 0 1rem var(--main-color);
+        }
 
-.btn:hover {
-    box-shadow: none;
-}
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.8rem;
+            background: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: 1.6rem;
+            color: var(--bg-color);
+            letter-spacing: .1rem;
+            font-weight: 600;
+            transition: .5s ease;
+        }
 
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14rem;
-    background: var(--snd-bg-color);
-}
+        .btn:hover {
+            box-shadow: none;
+        }
 
-.about-img img{
-    border-radius: 5%;
-    width: 35vw;
-}
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14rem;
+            background: var(--snd-bg-color);
+            flex-wrap: wrap;
+        }
 
-.heading {
-    text-align: center;
-    font-size: 4.5rem;
-}
+        .about-img img {
+            border-radius: 5%;
+            width: 35vw;
+        }
 
-.about-content h2 {
-    font-size: 3.6rem;
-    font-weight: 700;
-    text-align: left;
-    line-height: 1.2;
-}
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+        }
 
-.about-content h3 {
-    font-size: 2.6rem;
-}
+        .about-content h2 {
+            font-size: 3.6rem;
+            font-weight: 700;
+            text-align: left;
+            line-height: 1.2;
+        }
 
-.about-content p {
-    font-size: medium;
-    margin: 2rem 0 3rem;
-}
+        .about-content h3 {
+            font-size: 2.6rem;
+        }
 
-.services h2 {
-    margin-bottom: 5rem;
-}
+        .about-content p {
+            font-size: medium;
+            margin: 2rem 0 3rem;
+        }
 
-.services-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
+        .services h2 {
+            margin-bottom: 5rem;
+        }
 
-.services-container .services-box {
-    flex: 1 1 30rem;
-    background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
-}
+        .services-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
 
-.services-container .services-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
+        .services-container .services-box {
+            flex: 1 1 30rem;
+            background: var(--snd-bg-color);
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid var(--bg-color);
+            transition: .5s ease;
+        }
 
-.services-box h3 {
-    font-size: 2.6rem;
-}
+        .services-container .services-box:hover {
+            border-color: var(--main-color);
+            transform: scale(1.02);
+        }
 
-.services-box p {
-    font-size: medium;
-    margin: 1rem 0 3rem;
-}
+        .services-box h3 {
+            font-size: 2.6rem;
+        }
 
-.portfolio {
-    background: var(--snd-bg-color);
-}
+        .services-box p {
+            font-size: medium;
+            margin: 1rem 0 3rem;
+        }
 
-.portfolio h2 {
-    margin-bottom: 4rem;
-}
+        .portfolio {
+            background: var(--snd-bg-color);
+        }
 
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
+        .portfolio h2 {
+            margin-bottom: 4rem;
+        }
 
-.portfolio-container .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-}
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
 
-.portfolio-box img {
-    width: 100%;
-    transition: .5s ease;
-    opacity: 0.7;
-}
+        .portfolio-container .portfolio-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--bg-color);
+            overflow: hidden;
+            display: flex;
+        }
 
-.portfolio-box:hover img{
-    transform: scale(1.1);
-}
+        .portfolio-box img {
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0.7;
+        }
 
+        .portfolio-box:hover img {
+            transform: scale(1.1);
+        }
 
-.portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-    transition: .5s ease;
-}
+        .portfolio-box .portfolio-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
 
-.portfolio-box:hover .portfolio-layer {
-    transform: translateY(0);
-}
+        .portfolio-box:hover .portfolio-layer {
+            transform: translateY(0);
+        }
 
-.portfolio-layer h4 {
-    font-size: 3rem;
-}
+        .portfolio-layer h4 {
+            font-size: 3rem;
+        }
 
-.portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-}
+        .portfolio-layer p {
+            font-size: 1.6rem;
+            margin: .3rem 0 1rem;
+        }
 
-.portfolio-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    background: var(--text-color);
-    border-radius: 50%;
-}
+        .portfolio-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: var(--text-color);
+            border-radius: 50%;
+        }
 
-.portfolio-layer a i {
-    font-size: 2rem;
-    color: var(--snd-bg-color);
-}
+        .portfolio-layer a i {
+            font-size: 2rem;
+            color: var (--snd-bg-color);
+        }
 
-.contact h2 {
-    margin-bottom: 3rem;
-}
+        .contact h2 {
+            margin-bottom: 3rem;
+        }
 
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
+        .contact form {
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
 
-.contact form .input-box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        .contact form .input-box {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-.contact form .input-box input,
-.contact form textarea {
-     width: 100%;
-     padding: 1.5rem;
-     font-size: 1.6rem;
-     color: var(--text-color);
-     background: var(--snd-bg-color);
-     border-radius: 0.8rem;
-     margin: .7rem 0;
-}
+        .contact form .input-box input,
+        .contact form textarea {
+            width: 100%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background: var(--snd-bg-color);
+            border-radius: .5rem;
+            margin: .7rem 0;
+        }
 
-.contact form .input-box input {
-    width: 49%;
-}
+        .contact form textarea {
+            height: 18rem;
+            resize: none;
+        }
 
-.contact form textarea {
-    resize: none;
-}
+        .footer {
+            background: var(--bg-color);
+            text-align: center;
+            padding: 1rem 9rem;
+            border-top: .1rem solid rgba(255, 255, 255, 0.1);
+        }
 
-.contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
-}
+        .footer span {
+            color: var(--main-color);
+        }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 22%;
-    background: var(--snd-bg-color);
-}
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
 
-.footer-text {
-    font-size: 1.6rem;
-}
+            .about {
+                gap: 6rem;
+            }
 
-.footer-iconTop {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem 1rem;
-    background: var(--main-color);
-    border-radius: .8rem;
-    transition: .5 ease;
-}
+            .home-img img {
+                width: 35rem;
+            }
 
-.footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var(--main-color);
-}
+            .about-img img {
+                width: 35rem;
+            }
+        }
 
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: var(--snd-bg-color);
-}
+        @media (max-width: 768px) {
+            #menu-icon {
+                display: block;
+            }
 
-</style>
+            .navbar {
+                position: absolute;
+                top: 120%;
+                right: 2rem;
+                background: var(--bg-color);
+                border-radius: .5rem;
+                box-shadow: 0 0 .5rem rgba(0, 0, 0, .3);
+                flex-direction: column;
+                align-items: flex-start;
+                width: 30rem;
+                padding: 2rem;
+                transition: .3s;
+                transform: translateX(150%);
+                opacity: 0;
+            }
+
+            .navbar a {
+                margin: 1.5rem 0;
+                padding-left: 2rem;
+                width: 100%;
+            }
+
+            .navbar.active {
+                transform: translateX(0%);
+                opacity: 1;
+            }
+
+            .home {
+                gap: 4rem;
+            }
+
+            .about {
+                gap: 4rem;
+            }
+
+            .home-img img {
+                width: 100%;
+            }
+
+            .about-img img {
+                width: 100%;
+            }
+
+            .services-container {
+                flex-direction: column;
+            }
+
+            .portfolio-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 50%;
+            }
+
+            .home-content h1 {
+                font-size: 4rem;
+            }
+
+            .home-content h3 {
+                font-size: 2.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 3rem;
+            }
+
+            .about-content h3 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
 <body>
-    <!-- Header Design   -->
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <div id="menu-icon" class="fas fa-bars"></div>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -403,191 +475,148 @@ span {
         </nav>
     </header>
 
-      <!-- Home Section Design -->
-      <section class="home" id="home">
+    <section class="home" id="home">
         <div class="home-content">
-            <h3>Hi, Myself</h3>
-            <h1>Raheel Saleem</h1>
-            <h3>And I'm a <span>Backend Developer</span>
-            <p>with extensive experience in PHP and MySQL. I focus on creating efficient, maintainable code while ensuring application security and performance. My expertise includes database optimization and implementing best practices for robust and scalable web applications.</p>
+            <h3>Hello, It's Me</h3>
+            <h1>John Doe</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos alias fugiat facilis.</p>
             <div class="social-media">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Resume</a>
+            <a href="#" class="btn">Download CV</a>
         </div>
         <div class="home-img">
-            <img src="img.jpg" alt="">
+            <img src="https://via.placeholder.com/150" alt="Profile Image">
         </div>
-      </section>
+    </section>
 
-
-      <!--About Section Design -->
-      <section class="about" id="about">
+    <section class="about" id="about">
         <div class="about-img">
-            <img src="pic2.jpeg" alt="">
+            <img src="https://via.placeholder.com/150" alt="About Image">
         </div>
-
         <div class="about-content">
-            <h2 class="haeding">ABOUT <span>Me</span></h2>
-            <h3>Backend Developer</h3>
-            <p>As an emerging backend Laravel developer, I bring enthusiasm and a solid foundation in PHP and MySQL to the table. I have experience working on e-commerce projects and am dedicated to writing efficient and maintainable code. While I am still building my expertise, I am proficient in using Git for version control and am committed to learning and adopting best practices in application security and performance. My goal is to become a successful coder, driven by a passion for developing reliable and high-performing web applications.</p>
-            <a href="#" class="btn">Read more</a>
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Web Developer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos alias fugiat facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dolorem?</p>
+            <a href="#" class="btn">Read More</a>
         </div>
-      </section>
+    </section>
 
-
-      <!--Services Section Design -->
-      <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
         <div class="services-container">
             <div class="services-box">
-                <i class="fa-solid fa-code"></i>
+                <i class="fas fa-code"></i>
                 <h3>Web Development</h3>
-                <p>Web development involves building and maintaining websites and web applications. It includes front-end development, which focuses on the user interface and experience using HTML, CSS, and JavaScript, and back-end development, which handles server-side logic, databases, and application functionality using languages like PHP, Python, and Ruby.</p>
-                <a href="#" class="btn">Read More</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos alias fugiat facilis.</p>
             </div>
-
-           <div class="services-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>WordPress</h3>
-                <p>WordPress is a popular open-source content management system (CMS) used for building websites and blogs. It offers a user-friendly interface, a wide range of customizable themes and plugins, and robust community support, making it accessible for both beginners and experienced developers.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
             <div class="services-box">
-                <i class="fa-solid fa-droplet"></i>
-                <h3>Graphic Designing</h3>
-                <p>Graphic designing is the art and practice of creating visual content to communicate messages. It involves using typography, imagery, color, and layout techniques to produce visually appealing designs for print and digital media, including logos, advertisements, websites, and social media graphics.</p>
-                <a href="#" class="btn">Read More</a>
+                <i class="fas fa-paint-brush"></i>
+                <h3>Graphic Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos alias fugiat facilis.</p>
+            </div>
+            <div class="services-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>SEO</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos alias fugiat facilis.</p>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!--portfolio Section Design -->
-      <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
-
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="web.jpg" alt="">
+                <img src="https://via.placeholder.com/150" alt="Project 1">
                 <div class="portfolio-layer">
-                    <h4>Laravel</h4>
-                    <p>Management System.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <h4>Project 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-
-          <a href="https://lightnimble.com/" target="_blank">
-    <div class="portfolio-box">
-        <img src="web.jpg" alt="">
-        <div class="portfolio-layer">
-            <h4>WordPress</h4>
-            <p>Light Nimble.</p>
-            <i class="fa-solid fa-up-right-from-square"></i>
-        </div>
-    </div>
-</a>
-
-
             <div class="portfolio-box">
-                <img src="web.jpg" alt="">
+                <img src="https://via.placeholder.com/150" alt="Project 2">
                 <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <h4>Project 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-
             <div class="portfolio-box">
-                <img src="web.jpg" alt="">
+                <img src="https://via.placeholder.com/150" alt="Project 3">
                 <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="web.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="web.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <i class="fa-solid fa-up-right-from-square"></i>
+                    <h4>Project 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
-      </section>
+    </section>
 
-      <!--Contact Section Design -->
-      <section class="contact" id="contact">
+    <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
-
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
             </div>
-
-            <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" ></textarea>
-            <input type="submit" value="Send Message" class="btn">      
+            <textarea placeholder="Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
 
-    <!--Footer Design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by @raheelsaleem2000 | All Rights Reserved.</p>
+    <div class="footer">
+        <p>&copy; 2024 John Doe. All Rights Reserved.</p>
+    </div>
 
-            <div class="footer-iconTop">
-                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-            </div>
-        </div>
-    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuIcon = document.getElementById('menu-icon');
+            const navbar = document.querySelector('.navbar');
 
+            menuIcon.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+            });
 
+            // Text animation
+            const typedTextSpan = document.querySelector(".multiple-text");
+            const cursorSpan = document.querySelector(".cursor");
 
+            const textArray = ["Web Developer", "Graphic Designer", "SEO Specialist"];
+            const typingDelay = 100;
+            const erasingDelay = 100;
+            const newTextDelay = 2000; // Delay between current and next text
+            let textArrayIndex = 0;
+            let charIndex = 0;
 
+            function type() {
+                if (charIndex < textArray[textArrayIndex].length) {
+                    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingDelay);
+                } else {
+                    setTimeout(erase, newTextDelay);
+                }
+            }
 
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingDelay);
+                } else {
+                    textArrayIndex++;
+                    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+                    setTimeout(type, typingDelay + 1100);
+                }
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script> src="/main.js" </script>
+            if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+    </script>
 </body>
 </html>
